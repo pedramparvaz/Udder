@@ -32,12 +32,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yl4-0k-W8W">
+                                <rect key="frame" x="0.0" y="217" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kzm-zr-HEH"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="TEI-dZ-ied"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="chs-JZ-6ld" id="OZe-vw-AM8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="chs-JZ-6ld">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="5Ns-F8-IOm"/>
+                        <outlet property="searchBar" destination="Yl4-0k-W8W" id="fUS-Lq-aR6"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="iMc-oH-Xmh"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="eN5-vc-1MK"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="g9r-Ct-Q5j"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
         </scene>
     </scenes>
